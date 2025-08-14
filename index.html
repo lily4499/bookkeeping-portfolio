@@ -103,9 +103,12 @@
 
   <main class="container">
     <!-- About Me (moved before Skills) -->
-    <section aria-labelledby="about-heading" style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
-  <img src="headshot.png" alt="Liliane Konissi Headshot" style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 3px solid #4cc38a; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-  <div>
+    <section aria-labelledby="about-heading" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+  <div style="flex-shrink: 0;">
+    <img src="headshot.png" alt="Liliane Konissi Headshot" 
+         style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 3px solid #4cc38a; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+  </div>
+  <div style="flex: 1; min-width: 250px;">
     <h2 id="about-heading">About Me</h2>
     <p class="muted">
       I’m Liliane Konissi, a bookkeeper who loves clean books and clear stories in the numbers.
@@ -116,6 +119,7 @@
     </p>
   </div>
 </section>
+
 
 <!--     <section aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
