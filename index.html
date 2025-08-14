@@ -32,7 +32,6 @@
     a { color: var(--text); text-decoration: none; }
     .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
-    /* Header */
     header.hero { padding: 56px 0 24px; text-align: center; position: relative; }
     .badge { display: inline-block; padding: 6px 12px; border-radius: 999px; background: #1b2229; color: var(--muted); font-size: 12px; letter-spacing: .2px; border: 1px solid #22303a; }
     h1 { font-size: clamp(28px, 4vw, 42px); margin: 12px 0 10px; letter-spacing: -0.02em; }
@@ -42,21 +41,17 @@
     .btn:hover { transform: translateY(-1px); border-color: var(--accent); box-shadow: 0 12px 40px var(--ring); }
     .btn.primary { background: linear-gradient(180deg, #1f2a2f 0%, #161c21 100%); border: 1px solid #2a3a44; }
 
-    /* Sections */
     section { margin: 42px 0; }
     h2 { font-size: clamp(22px, 3vw, 28px); margin: 0 0 14px; letter-spacing: -0.01em; }
     .muted { color: var(--muted); font-size: 15px; }
 
-    /* Chips */
     .chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .chip { font-size: 13px; padding: 8px 10px; border-radius: 999px; border: 1px solid #2a3a44; background: #12181d; color: var(--text); }
 
-    /* Grid */
     .grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 18px; }
     @media (min-width: 700px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (min-width: 1000px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-    /* Card */
     .card { background: var(--card); border: 1px solid #1e2830; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
     .card img { width: 100%; height: 200px; object-fit: cover; background: #0e1317; }
     .card .content { padding: 14px; display: grid; gap: 8px; }
@@ -65,7 +60,6 @@
     .card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
     .tag { font-size: 11px; padding: 4px 8px; border-radius: 999px; border: 1px dashed #2a3a44; color: var(--muted); }
 
-    /* Filters */
     .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
     .filter { padding: 8px 10px; border-radius: 999px; border: 1px solid #2a3a44; background: #0f151a; color: var(--muted); cursor: pointer; }
     .filter[aria-pressed="true"] { background: #162028; color: var(--text); border-color: var(--accent); box-shadow: 0 0 0 3px var(--ring) inset; }
@@ -73,18 +67,6 @@
     footer { margin: 50px 0 20px; text-align: center; color: var(--muted); font-size: 14px; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   </style>
-
-  <!-- Structured Data (optional) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Liliane Konissi",
-    "jobTitle": "Bookkeeper",
-    "url": "",
-    "sameAs": []
-  }
-  </script>
 </head>
 <body>
   <header class="hero">
@@ -92,8 +74,7 @@
       <span class="badge">Career Portfolio</span>
       <h1>Liliane Konissi — Bookkeeping Portfolio</h1>
       <p class="subtitle">Showcasing QuickBooks workflows, bank reconciliations, AP/AR, payroll, and financial reporting. Built to help hiring managers evaluate real, job-ready bookkeeping skills.</p>
-      <div class="actions" role="group" aria-label="Primary actions">
-        <!-- Update the href values to your actual files/links -->
+      <div class="actions">
         <a class="btn primary" href="#" download>Download Resume (PDF)</a>
         <a class="btn" href="mailto:youremail@example.com">Email Me</a>
         <a class="btn" href="#projects">View Projects</a>
@@ -102,7 +83,7 @@
   </header>
 
   <main class="container">
-    <!-- About Me (moved before Skills) -->
+    <!-- About Me -->
     <section aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
       <p class="muted">
@@ -118,7 +99,7 @@
     <section aria-labelledby="skills-heading">
       <h2 id="skills-heading">Skills & Tools</h2>
       <p class="muted">Core bookkeeping skills and the tools I use day-to-day.</p>
-      <div class="chips" style="margin-top:10px">
+      <div class="chips">
         <span class="chip">QuickBooks Online</span>
         <span class="chip">Bank Reconciliation</span>
         <span class="chip">Accounts Payable</span>
@@ -135,26 +116,26 @@
     <section aria-labelledby="certs-heading">
       <h2 id="certs-heading">Certifications</h2>
       <p class="muted">Selected certifications and trainings.</p>
-      <div class="chips" style="margin-top:10px">
+      <div class="chips">
         <span class="chip">QuickBooks Online Certification</span>
         <span class="chip">Bookkeeping Fundamentals</span>
         <span class="chip">Excel for Finance</span>
       </div>
     </section>
 
-    <!-- Projects / Gallery -->
+    <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects & Examples</h2>
-      <p class="muted">Click a filter to focus on a skill area. Project titles open the YouTube walkthrough.</p>
-      <div class="filters" role="toolbar" aria-label="Project filters">
+      <p class="muted">Click on any image to watch the YouTube walkthrough.</p>
+      <div class="filters">
         <button class="filter" aria-pressed="true" data-filter="all">All</button>
         <button class="filter" aria-pressed="false" data-filter="qb">QuickBooks</button>
         <button class="filter" aria-pressed="false" data-filter="reports">Reports</button>
         <button class="filter" aria-pressed="false" data-filter="workflow">Workflow</button>
         <button class="filter" aria-pressed="false" data-filter="certs">Certifications</button>
       </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <span id="filter-status" class="sr-only" aria-live="polite"></span>
+      <div id="grid" class="grid"></div>
+      <span id="filter-status" class="sr-only"></span>
     </section>
   </main>
 
@@ -162,72 +143,63 @@
     <div class="container">© <span id="year"></span> Liliane Konissi · Bookkeeping Portfolio</div>
   </footer>
 
-  <!-- HOW TO:
-    1) Put this HTML with your images (filenames below).
-    2) Update email/resume links above.
-    3) Replace each https://youtu.be/... with your real video URLs.
-  -->
-
   <script>
-  // Dynamic year
-  document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Portfolio data (add/modify as needed)
-  const projects = [
-    { file: 'bank_reconciliation.png', title: 'Bank Reconciliation – Accuracy in Action', url: 'https://youtu.be/VIDEO_ID_BANK_RECON', desc: 'Reconciling accounts and matching transactions to bank statements.', cat: 'qb', tags: ['QuickBooks','Reconciliation'] },
-    { file: 'ap_aging_report.png', title: 'AP Aging – Vendor Management', url: 'https://youtu.be/VIDEO_ID_AP_AGING', desc: 'Tracking unpaid bills to manage cash flow and vendor relationships.', cat: 'qb', tags: ['AP','Aging'] },
-    { file: 'ar_aging_report.png', title: 'AR Aging – Cash Flow Tracking', url: 'https://youtu.be/VIDEO_ID_AR_AGING', desc: 'Monitoring overdue invoices to improve collections and cash flow.', cat: 'qb', tags: ['AR','Collections'] },
-    { file: 'payroll_summary.png', title: 'Payroll Summary – Timely & Compliant', url: 'https://youtu.be/VIDEO_ID_PAYROLL', desc: 'Sample payroll run with gross pay, deductions, and net pay.', cat: 'workflow', tags: ['Payroll'] },
-    { file: 'profit_loss.png', title: 'Profit & Loss – Performance Insight', url: 'https://youtu.be/VIDEO_ID_PL', desc: 'Producing & interpreting P&L to assess profitability.', cat: 'reports', tags: ['P&L','Reporting'] },
-    { file: 'balance_sheet.png', title: 'Balance Sheet – Financial Snapshot', url: 'https://youtu.be/VIDEO_ID_BS', desc: 'Assets, liabilities, and equity at a point in time.', cat: 'reports', tags: ['Balance Sheet'] },
-    { file: 'cash_flow.png', title: 'Cash Flow – Health Overview', url: 'https://youtu.be/VIDEO_ID_CASHFLOW', desc: 'Tracking inflows and outflows to maintain liquidity.', cat: 'reports', tags: ['Cash Flow'] },
-    { file: 'invoice_workflow.png', title: 'Invoice Entry – Streamlined Operations', url: 'https://youtu.be/VIDEO_ID_INVOICE', desc: 'Efficient, accurate customer invoice entry in QuickBooks.', cat: 'workflow', tags: ['Invoicing'] },
-    { file: 'expense_categorization.png', title: 'Expense Categorization – Organized Records', url: 'https://youtu.be/VIDEO_ID_EXP_CAT', desc: 'Coding expenses to the proper chart of accounts.', cat: 'workflow', tags: ['COA','Expenses'] },
-    { file: 'monthly_close.png', title: 'Month-End Close – Checklist', url: 'https://youtu.be/VIDEO_ID_MONTH_CLOSE', desc: 'A structured month-end process to ensure completeness.', cat: 'workflow', tags: ['Close','Checklist'] },
-    { file: 'qbo_cert.png', title: 'QuickBooks Online Certification', url: 'https://youtu.be/VIDEO_ID_QBO_CERT', desc: 'Proof of proficiency with QuickBooks Online.', cat: 'certs', tags: ['Certification'] },
-    { file: 'bookkeeping_cert.png', title: 'Bookkeeping Training Certificates', url: 'https://youtu.be/VIDEO_ID_BK_CERT', desc: 'Courses completed in bookkeeping and payroll.', cat: 'certs', tags: ['Training'] },
-    { file: 'excel_cert.png', title: 'Excel & Reporting Skills', url: 'https://youtu.be/VIDEO_ID_EXCEL', desc: 'Data analysis and report building in Excel.', cat: 'certs', tags: ['Excel'] },
-    { file: 'before_after.png', title: 'Before → After: Cleaned Books', url: 'https://youtu.be/VIDEO_ID_CLEANUP', desc: 'Transforming messy records into clean, usable data.', cat: 'workflow', tags: ['Cleanup'] },
-    { file: 'process_infographic.png', title: 'My Bookkeeping Process (Infographic)', url: 'https://youtu.be/VIDEO_ID_PROCESS', desc: 'End-to-end workflow from documents to reports.', cat: 'workflow', tags: ['Process'] },
-    { file: 'headshot.png', title: 'About Me — Liliane Konissi', url: 'https://youtu.be/VIDEO_ID_ABOUT', desc: 'Professional headshot for employer connection.', cat: 'qb', tags: ['About'] },
-  ];
+    const projects = [
+      { file: 'bank_reconciliation.png', title: 'Bank Reconciliation – Accuracy in Action', url: 'https://youtu.be/VIDEO_ID_BANK_RECON', desc: 'Reconciling accounts and matching transactions to bank statements.', cat: 'qb', tags: ['QuickBooks','Reconciliation'] },
+      { file: 'ap_aging_report.png', title: 'AP Aging – Vendor Management', url: 'https://youtu.be/VIDEO_ID_AP_AGING', desc: 'Tracking unpaid bills to manage cash flow and vendor relationships.', cat: 'qb', tags: ['AP','Aging'] },
+      { file: 'ar_aging_report.png', title: 'AR Aging – Cash Flow Tracking', url: 'https://youtu.be/VIDEO_ID_AR_AGING', desc: 'Monitoring overdue invoices to improve collections and cash flow.', cat: 'qb', tags: ['AR','Collections'] },
+      { file: 'payroll_summary.png', title: 'Payroll Summary – Timely & Compliant', url: 'https://youtu.be/VIDEO_ID_PAYROLL', desc: 'Sample payroll run with gross pay, deductions, and net pay.', cat: 'workflow', tags: ['Payroll'] },
+      { file: 'profit_loss.png', title: 'Profit & Loss – Performance Insight', url: 'https://youtu.be/VIDEO_ID_PL', desc: 'Producing & interpreting P&L to assess profitability.', cat: 'reports', tags: ['P&L','Reporting'] },
+      { file: 'balance_sheet.png', title: 'Balance Sheet – Financial Snapshot', url: 'https://youtu.be/VIDEO_ID_BS', desc: 'Assets, liabilities, and equity at a point in time.', cat: 'reports', tags: ['Balance Sheet'] },
+      { file: 'cash_flow.png', title: 'Cash Flow – Health Overview', url: 'https://youtu.be/VIDEO_ID_CASHFLOW', desc: 'Tracking inflows and outflows to maintain liquidity.', cat: 'reports', tags: ['Cash Flow'] },
+      { file: 'invoice_workflow.png', title: 'Invoice Entry – Streamlined Operations', url: 'https://youtu.be/VIDEO_ID_INVOICE', desc: 'Efficient, accurate customer invoice entry in QuickBooks.', cat: 'workflow', tags: ['Invoicing'] },
+      { file: 'expense_categorization.png', title: 'Expense Categorization – Organized Records', url: 'https://youtu.be/VIDEO_ID_EXP_CAT', desc: 'Coding expenses to the proper chart of accounts.', cat: 'workflow', tags: ['COA','Expenses'] },
+      { file: 'monthly_close.png', title: 'Month-End Close – Checklist', url: 'https://youtu.be/VIDEO_ID_MONTH_CLOSE', desc: 'A structured month-end process to ensure completeness.', cat: 'workflow', tags: ['Close','Checklist'] },
+      { file: 'qbo_cert.png', title: 'QuickBooks Online Certification', url: 'https://youtu.be/VIDEO_ID_QBO_CERT', desc: 'Proof of proficiency with QuickBooks Online.', cat: 'certs', tags: ['Certification'] },
+      { file: 'bookkeeping_cert.png', title: 'Bookkeeping Training Certificates', url: 'https://youtu.be/VIDEO_ID_BK_CERT', desc: 'Courses completed in bookkeeping and payroll.', cat: 'certs', tags: ['Training'] },
+      { file: 'excel_cert.png', title: 'Excel & Reporting Skills', url: 'https://youtu.be/VIDEO_ID_EXCEL', desc: 'Data analysis and report building in Excel.', cat: 'certs', tags: ['Excel'] },
+      { file: 'before_after.png', title: 'Before → After: Cleaned Books', url: 'https://youtu.be/VIDEO_ID_CLEANUP', desc: 'Transforming messy records into clean, usable data.', cat: 'workflow', tags: ['Cleanup'] },
+      { file: 'process_infographic.png', title: 'My Bookkeeping Process (Infographic)', url: 'https://youtu.be/VIDEO_ID_PROCESS', desc: 'End-to-end workflow from documents to reports.', cat: 'workflow', tags: ['Process'] },
+      { file: 'headshot.png', title: 'About Me — Liliane Konissi', url: 'https://youtu.be/VIDEO_ID_ABOUT', desc: 'Professional headshot for employer connection.', cat: 'qb', tags: ['About'] },
+    ];
 
-  const grid = document.getElementById('grid');
-  const filters = document.querySelectorAll('.filter');
-  const status = document.getElementById('filter-status');
+    const grid = document.getElementById('grid');
+    const filters = document.querySelectorAll('.filter');
+    const status = document.getElementById('filter-status');
 
-  function render(filter = 'all') {
-    grid.innerHTML = '';
-    const items = projects.filter(p => filter === 'all' || p.cat === filter);
-    for (const p of items) {
-      const card = document.createElement('article');
-      card.className = 'card';
-      card.setAttribute('data-cat', p.cat);
-      card.innerHTML = `
-        <a href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} — opens in YouTube">
-          <img loading="lazy" src="${p.file}" alt="${p.title}">
-        </a>
-        <div class="content">
-          <h3>${p.title}</h3>
-          <p>${p.desc}</p>
-          <div class="tags">${(p.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
-        </div>
-      `;
-      grid.appendChild(card);
+    function render(filter = 'all') {
+      grid.innerHTML = '';
+      const items = projects.filter(p => filter === 'all' || p.cat === filter);
+      for (const p of items) {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.setAttribute('data-cat', p.cat);
+        card.innerHTML = `
+          <a href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} — opens in YouTube">
+            <img loading="lazy" src="${p.file}" alt="${p.title}">
+          </a>
+          <div class="content">
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+            <div class="tags">${(p.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+      status.textContent = `${items.length} project${items.length!==1?'s':''} shown for “${filter}”.`;
     }
-    status.textContent = `${items.length} project${items.length!==1?'s':''} shown for “${filter}”.`;
-  }
 
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filters.forEach(b => b.setAttribute('aria-pressed','false'));
-      btn.setAttribute('aria-pressed','true');
-      render(btn.dataset.filter);
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.setAttribute('aria-pressed','false'));
+        btn.setAttribute('aria-pressed','true');
+        render(btn.dataset.filter);
+      });
     });
-  });
 
-  render('all');
-</script>
-
+    render('all');
+  </script>
 </body>
 </html>
