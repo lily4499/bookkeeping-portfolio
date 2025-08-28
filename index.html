@@ -305,5 +305,132 @@ I streamline accounting workflows, catch and correct discrepancies, and deliver 
 
     render('all');
   </script>
+
+  <!-- QuickBooks Tools Table (appended) -->
+  <section id="qb-tools" class="container" aria-labelledby="qb-tools-heading">
+    <h2 id="qb-tools-heading">📊 QuickBooks Tools to Answer Key Business Questions</h2>
+    <p class="muted">Each tool links to a relevant search on Medium for tutorials and deep dives.</p>
+
+    <style>
+      /* Scoped styling for the table */
+      #qb-tools .qb-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: var(--card);
+        border: 1px solid #1e2830;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      #qb-tools thead th {
+        background: #0b1220;
+        color: var(--text);
+        text-align: left;
+        padding: 14px 16px;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+      }
+      #qb-tools tbody td {
+        padding: 14px 16px;
+        vertical-align: top;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+        color: var(--text);
+      }
+      #qb-tools tbody tr:nth-child(odd) td { background: rgba(255,255,255,.02); }
+      #qb-tools a.tool {
+        color: #93c5fd;
+        text-decoration: none;
+        border-bottom: 1px dashed #93c5fd;
+      }
+      #qb-tools a.tool:hover { color: #60a5fa; border-bottom-color: #60a5fa; }
+      #qb-tools .q { font-weight: 600; color: var(--text); }
+      #qb-tools .insight { color: #cbd5e1; }
+    </style>
+
+    <div class="table-wrap">
+      <table class="qb-table" aria-label="QuickBooks Tools mapped to business questions">
+        <thead>
+          <tr>
+            <th>Business Question</th>
+            <th>QuickBooks Tool/Report (linked)</th>
+            <th>Insight You Gain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- What is impacting profitability? -->
+          <tr>
+            <td class="q" rowspan="3">What is impacting profitability?</td>
+            <td><a class="tool" href="https://medium.com/search?q=Profit%20%26%20Loss%20Report%20QuickBooks" target="_blank" rel="noopener">Profit &amp; Loss Report</a></td>
+            <td class="insight">See if income covers expenses and where profit is shrinking.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Profit%20%26%20Loss%20by%20Customer%2FJob%20QuickBooks" target="_blank" rel="noopener">Profit &amp; Loss by Customer/Job</a></td>
+            <td class="insight">Identify which customers or jobs are profitable vs. unprofitable.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Budget%20vs.%20Actual%20QuickBooks" target="_blank" rel="noopener">Budget vs. Actual</a></td>
+            <td class="insight">Spot areas where spending exceeded planned budget.</td>
+          </tr>
+
+          <!-- Where is money being spent, and where can savings be found? -->
+          <tr>
+            <td class="q" rowspan="3">Where is money being spent, and where can savings be found?</td>
+            <td><a class="tool" href="https://medium.com/search?q=Expense%20by%20Vendor%20Summary%20QuickBooks" target="_blank" rel="noopener">Expense by Vendor Summary</a></td>
+            <td class="insight">See top vendors where most money goes; negotiate better terms.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Expense%20by%20Account%20Detail%20QuickBooks" target="_blank" rel="noopener">Expense by Account Detail</a></td>
+            <td class="insight">Understand categories (Fuel, Supplies, etc.) driving costs.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Accounts%20Payable%20Aging%20QuickBooks" target="_blank" rel="noopener">Accounts Payable Aging</a></td>
+            <td class="insight">Track unpaid bills to avoid late fees and cash flow strain.</td>
+          </tr>
+
+          <!-- What areas are driving success, and what challenges need attention? -->
+          <tr>
+            <td class="q" rowspan="4">What areas are driving success, and what challenges need attention?</td>
+            <td><a class="tool" href="https://medium.com/search?q=Sales%20by%20Customer%20Detail%20QuickBooks" target="_blank" rel="noopener">Sales by Customer Detail</a></td>
+            <td class="insight">Find top customers driving revenue.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Sales%20by%20Product%2FService%20Summary%20QuickBooks" target="_blank" rel="noopener">Sales by Product/Service Summary</a></td>
+            <td class="insight">Learn which products/services generate the most income.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Accounts%20Receivable%20Aging%20QuickBooks" target="_blank" rel="noopener">Accounts Receivable Aging</a></td>
+            <td class="insight">Spot overdue invoices creating cash flow challenges.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Cash%20Flow%20Statement%20QuickBooks" target="_blank" rel="noopener">Cash Flow Statement</a></td>
+            <td class="insight">Check if operations generate enough cash to cover expenses.</td>
+          </tr>
+
+          <!-- How can financial processes become more efficient? -->
+          <tr>
+            <td class="q" rowspan="4">How can financial processes become more efficient?</td>
+            <td><a class="tool" href="https://medium.com/search?q=Bank%20Reconciliation%20QuickBooks" target="_blank" rel="noopener">Bank Reconciliation Tool</a></td>
+            <td class="insight">Match bank transactions automatically, reduce errors.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Bank%20Feed%20Rules%20QuickBooks" target="_blank" rel="noopener">Bank Feed Rules</a></td>
+            <td class="insight">Auto-categorize recurring expenses to save time.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=Recurring%20Transactions%20QuickBooks" target="_blank" rel="noopener">Recurring Transactions</a></td>
+            <td class="insight">Automate invoices, bills, and journal entries.</td>
+          </tr>
+          <tr>
+            <td><a class="tool" href="https://medium.com/search?q=QuickBooks%20Dashboard%20Overview" target="_blank" rel="noopener">Dashboard (Overview Tab)</a></td>
+            <td class="insight">Get quick snapshots of sales, expenses, and profitability.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  
 </body>
 </html>
