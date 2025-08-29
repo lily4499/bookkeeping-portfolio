@@ -235,66 +235,19 @@ I streamline accounting workflows, catch and correct discrepancies, and deliver 
     3) Replace each https://youtu.be/... with your real video URLs.
   -->
 
-  <script>
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Portfolio data (add/modify as needed)
-    const projects = [
-      { file: 'images/bank_reconciliation.png', title: 'Bank Reconciliation – Accuracy in Action', url: 'https://youtu.be/cijRQQTEp0c', desc: 'Reconciling accounts and matching transactions to bank statements.', cat: 'qb', tags: ['QuickBooks','Reconciliation'] },
-      { file: 'images/ap_aging_report.png', title: 'AP Aging – Vendor Management', url: 'https://youtu.be/VIDEO_ID_AP_AGING', desc: 'Tracking unpaid bills to manage cash flow and vendor relationships.', cat: 'qb', tags: ['AP','Aging'] },
-      { file: 'images/ar_aging_report.png', title: 'AR Aging – Cash Flow Tracking', url: 'https://youtu.be/VIDEO_ID_AR_AGING', desc: 'Monitoring overdue invoices to improve collections and cash flow.', cat: 'qb', tags: ['AR','Collections'] },
-      { file: 'images/payroll_summary.png', title: 'Payroll Summary – Timely & Compliant', url: 'https://youtu.be/fmA6QnJ90bM', desc: 'Sample payroll run with gross pay, deductions, and net pay.', cat: 'workflow', tags: ['Payroll'] },
-      { file: 'images/profit_loss.png', title: 'Profit & Loss – Performance Insight', url: 'https://youtu.be/VIDEO_ID_PL', desc: 'Producing & interpreting P&L to assess profitability.', cat: 'reports', tags: ['P&L','Reporting'] },
-      { file: 'images/balance_sheet.png', title: 'Balance Sheet – Financial Snapshot', url: 'https://youtu.be/VIDEO_ID_BS', desc: 'Assets, liabilities, and equity at a point in time.', cat: 'reports', tags: ['Balance Sheet'] },
-      { file: 'images/cash_flow.png', title: 'Cash Flow – Health Overview', url: 'https://youtu.be/VIDEO_ID_CASHFLOW', desc: 'Tracking inflows and outflows to maintain liquidity.', cat: 'reports', tags: ['Cash Flow'] },
-      { file: 'images/invoice_workflow.png', title: 'Invoice Entry – Streamlined Operations', url: 'https://youtu.be/VIDEO_ID_INVOICE', desc: 'Efficient, accurate customer invoice entry in QuickBooks.', cat: 'workflow', tags: ['Invoicing'] },
-      { file: 'images/expense_categorization.png', title: 'Expense Categorization – Organized Records', url: 'https://youtu.be/VIDEO_ID_EXP_CAT', desc: 'Coding expenses to the proper chart of accounts.', cat: 'workflow', tags: ['COA','Expenses'] },
-      { file: 'images/monthly_close.png', title: 'Month-End Close – Checklist', url: 'https://youtu.be/VIDEO_ID_MONTH_CLOSE', desc: 'A structured month-end process to ensure completeness.', cat: 'workflow', tags: ['Close','Checklist'] },
-      // { file: 'intuit.png', title: 'Intuit Bookkeeping Certification', url: 'https://youtu.be/VIDEO_ID_QBO_CERT', desc: 'Mastery of bookkeeping principles and compliance.', cat: 'certs', tags: ['Certification'] },
-      // { file: 'level1.png', title: 'QuickBooks Online Certification Level 1', url: 'https://youtu.be/VIDEO_ID_BK_CERT', desc: 'Foundational QuickBooks skills: setup, transactions, reports.', cat: 'certs', tags: ['Training'] },
-      // { file: 'level2.png', title: 'QuickBooks Online Certification Level 2', url: 'https://youtu.be/VIDEO_ID_EXCEL', desc: 'Advanced QuickBooks: custom reports, automation, reconciliations.', cat: 'certs', tags: ['Excel'] },
-      // { file: 'payroll.png', title: 'QuickBooks Online Payroll Certification', url: 'https://youtu.be/VIDEO_ID_EXCEL', desc: 'Payroll setup, processing, compliance, and tax management.', cat: 'certs', tags: ['Excel'] },
-      { file: 'images/before_after.png', title: 'Before → After: Cleaned Books', url: 'https://youtu.be/g8aIN66jOR8', desc: 'Transforming messy records into clean, usable data.', cat: 'workflow', tags: ['Cleanup'] },
-      { file: 'images/process_infographic.png', title: 'My Bookkeeping Process (Infographic)', url: 'https://youtu.be/VIDEO_ID_PROCESS', desc: 'End-to-end workflow from documents to reports.', cat: 'workflow', tags: ['Process'] },
-      // { file: 'headshot.png', title: 'About Me — Liliane Konissi', url: 'https://youtu.be/VIDEO_ID_ABOUT', desc: 'Professional headshot for employer connection.', cat: 'qb', tags: ['About'] },
-    ];
 
-    const grid = document.getElementById('grid');
-    const filters = document.querySelectorAll('.filter');
-    const status = document.getElementById('filter-status');
 
-    function render(filter = 'all') {
-      grid.innerHTML = '';
-      const items = projects.filter(p => filter === 'all' || p.cat === filter);
-      for (const p of items) {
-        const card = document.createElement('article');
-        card.className = 'card';
-        card.setAttribute('data-cat', p.cat);
-        card.innerHTML = `
-          <img loading="lazy" src="${p.file}" alt="${p.title}">
-          <div class="content">
-            <h3><a href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} — opens in YouTube">${p.title}</a></h3>
-            <p>${p.desc}</p>
-            <div class="tags">${(p.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
-          </div>
-        `;
-        grid.appendChild(card);
-      }
-      status.textContent = `${items.length} project${items.length!==1?'s':''} shown for “${filter}”.`;
-    }
 
-    filters.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filters.forEach(b => b.setAttribute('aria-pressed','false'));
-        btn.setAttribute('aria-pressed','true');
-        render(btn.dataset.filter);
-      });
-    });
 
-    render('all');
-  </script>
 
+
+
+
+
+  
+
+ 
   <!-- QuickBooks Tools Table (appended) -->
   <section id="qb-tools" class="container" aria-labelledby="qb-tools-heading">
     <h2 id="qb-tools-heading">📊 QuickBooks Tools to Answer Key Business Questions</h2>
@@ -440,6 +393,65 @@ I streamline accounting workflows, catch and correct discrepancies, and deliver 
   <footer>
     <div class="container">© <span id="year"></span> Liliane Konissi · Bookkeeping Portfolio</div>
   </footer>
-  
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Portfolio data (add/modify as needed)
+    const projects = [
+      { file: 'images/bank_reconciliation.png', title: 'Bank Reconciliation – Accuracy in Action', url: 'https://youtu.be/cijRQQTEp0c', desc: 'Reconciling accounts and matching transactions to bank statements.', cat: 'qb', tags: ['QuickBooks','Reconciliation'] },
+      { file: 'images/ap_aging_report.png', title: 'AP Aging – Vendor Management', url: 'https://youtu.be/VIDEO_ID_AP_AGING', desc: 'Tracking unpaid bills to manage cash flow and vendor relationships.', cat: 'qb', tags: ['AP','Aging'] },
+      { file: 'images/ar_aging_report.png', title: 'AR Aging – Cash Flow Tracking', url: 'https://youtu.be/VIDEO_ID_AR_AGING', desc: 'Monitoring overdue invoices to improve collections and cash flow.', cat: 'qb', tags: ['AR','Collections'] },
+      { file: 'images/payroll_summary.png', title: 'Payroll Summary – Timely & Compliant', url: 'https://youtu.be/fmA6QnJ90bM', desc: 'Sample payroll run with gross pay, deductions, and net pay.', cat: 'workflow', tags: ['Payroll'] },
+      { file: 'images/profit_loss.png', title: 'Profit & Loss – Performance Insight', url: 'https://youtu.be/VIDEO_ID_PL', desc: 'Producing & interpreting P&L to assess profitability.', cat: 'reports', tags: ['P&L','Reporting'] },
+      { file: 'images/balance_sheet.png', title: 'Balance Sheet – Financial Snapshot', url: 'https://youtu.be/VIDEO_ID_BS', desc: 'Assets, liabilities, and equity at a point in time.', cat: 'reports', tags: ['Balance Sheet'] },
+      { file: 'images/cash_flow.png', title: 'Cash Flow – Health Overview', url: 'https://youtu.be/VIDEO_ID_CASHFLOW', desc: 'Tracking inflows and outflows to maintain liquidity.', cat: 'reports', tags: ['Cash Flow'] },
+      { file: 'images/invoice_workflow.png', title: 'Invoice Entry – Streamlined Operations', url: 'https://youtu.be/VIDEO_ID_INVOICE', desc: 'Efficient, accurate customer invoice entry in QuickBooks.', cat: 'workflow', tags: ['Invoicing'] },
+      { file: 'images/expense_categorization.png', title: 'Expense Categorization – Organized Records', url: 'https://youtu.be/VIDEO_ID_EXP_CAT', desc: 'Coding expenses to the proper chart of accounts.', cat: 'workflow', tags: ['COA','Expenses'] },
+      { file: 'images/monthly_close.png', title: 'Month-End Close – Checklist', url: 'https://youtu.be/VIDEO_ID_MONTH_CLOSE', desc: 'A structured month-end process to ensure completeness.', cat: 'workflow', tags: ['Close','Checklist'] },
+      // { file: 'intuit.png', title: 'Intuit Bookkeeping Certification', url: 'https://youtu.be/VIDEO_ID_QBO_CERT', desc: 'Mastery of bookkeeping principles and compliance.', cat: 'certs', tags: ['Certification'] },
+      // { file: 'level1.png', title: 'QuickBooks Online Certification Level 1', url: 'https://youtu.be/VIDEO_ID_BK_CERT', desc: 'Foundational QuickBooks skills: setup, transactions, reports.', cat: 'certs', tags: ['Training'] },
+      // { file: 'level2.png', title: 'QuickBooks Online Certification Level 2', url: 'https://youtu.be/VIDEO_ID_EXCEL', desc: 'Advanced QuickBooks: custom reports, automation, reconciliations.', cat: 'certs', tags: ['Excel'] },
+      // { file: 'payroll.png', title: 'QuickBooks Online Payroll Certification', url: 'https://youtu.be/VIDEO_ID_EXCEL', desc: 'Payroll setup, processing, compliance, and tax management.', cat: 'certs', tags: ['Excel'] },
+      { file: 'images/before_after.png', title: 'Before → After: Cleaned Books', url: 'https://youtu.be/g8aIN66jOR8', desc: 'Transforming messy records into clean, usable data.', cat: 'workflow', tags: ['Cleanup'] },
+      { file: 'images/process_infographic.png', title: 'My Bookkeeping Process (Infographic)', url: 'https://youtu.be/VIDEO_ID_PROCESS', desc: 'End-to-end workflow from documents to reports.', cat: 'workflow', tags: ['Process'] },
+      // { file: 'headshot.png', title: 'About Me — Liliane Konissi', url: 'https://youtu.be/VIDEO_ID_ABOUT', desc: 'Professional headshot for employer connection.', cat: 'qb', tags: ['About'] },
+    ];
+
+    const grid = document.getElementById('grid');
+    const filters = document.querySelectorAll('.filter');
+    const status = document.getElementById('filter-status');
+
+    function render(filter = 'all') {
+      grid.innerHTML = '';
+      const items = projects.filter(p => filter === 'all' || p.cat === filter);
+      for (const p of items) {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.setAttribute('data-cat', p.cat);
+        card.innerHTML = `
+          <img loading="lazy" src="${p.file}" alt="${p.title}">
+          <div class="content">
+            <h3><a href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} — opens in YouTube">${p.title}</a></h3>
+            <p>${p.desc}</p>
+            <div class="tags">${(p.tags||[]).map(t=>`<span class='tag'>${t}</span>`).join('')}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+      status.textContent = `${items.length} project${items.length!==1?'s':''} shown for “${filter}”.`;
+    }
+
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(b => b.setAttribute('aria-pressed','false'));
+        btn.setAttribute('aria-pressed','true');
+        render(btn.dataset.filter);
+      });
+    });
+
+    render('all');
+  </script>
+ 
 </body>
 </html>
